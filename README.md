@@ -1,6 +1,6 @@
 # CIS-5120-Assignment-1
 
-This repository contains a static, phone-sized HTML/CSS prototype of the Path@Penn course page with a new **Register Now** button.  
+This repository contains a static, phone-sized HTML/CSS prototype of the Path@Penn course page with a new Register Now button.  
 It shows the design from my high-fidelity prototype for my UI design assignment.
 
 ## How to Run It
