@@ -1,0 +1,89 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2822
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\margl1440\margr1440\vieww11520\viewh8400\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 :root\{\
+  --blue:#011F5B;   /* Penn blue */\
+  --red:#990000;    /* Penn red */\
+  --ink:#1f2937;\
+  --muted:#6b7280;\
+  --line:#e5e7eb;\
+  --bg:#ffffff;\
+  --radius:12px;\
+  --phone-w:390px;   /* iPhone 12 logical size */\
+  --phone-h:844px;\
+  font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Inter,Roboto,Arial,sans-serif;\
+\}\
+\
+/* Phone frame (for presentation only) */\
+body\{background:#f3f4f6;margin:0;display:grid;place-items:center;min-height:100vh\}\
+.phone\{\
+  width:var(--phone-w); height:var(--phone-h);\
+  background:#fff; border:12px solid #000; border-bottom-width:18px; border-radius:42px;\
+  overflow:hidden; box-shadow:0 24px 64px rgba(0,0,0,.25); position:relative;\
+  display:flex; flex-direction:column;\
+\}\
+\
+/* Top brand bar */\
+.brandbar\{\
+  background:var(--blue); color:#fff; height:48px; display:flex;\
+  align-items:center; justify-content:space-between; padding:0 12px; font-size:14px;\
+\}\
+.brandbar .brand\{font-weight:700; letter-spacing:.3px\}\
+.brandbar strong\{font-weight:800\}\
+\
+/* Red course bar */\
+.coursebar\{\
+  background:var(--red); color:#fff; height:44px; display:flex; align-items:center;\
+  padding:0 10px; gap:10px; font-weight:700;\
+\}\
+.coursebar .icon\{background:transparent; border:none; color:#fff; font-size:24px; line-height:1; padding:0 6px\}\
+.coursebar .coursecode\{flex:1\}\
+.coursebar .course-actions\{display:flex; gap:12px; font-size:18px\}\
+\
+/* Content */\
+.screen\{padding:14px 14px 88px; overflow:auto\}\
+.title\{margin:10px 0 0; font-size:22px\}\
+.meta\{color:var(--muted); font-size:13px; margin:4px 0 10px\}\
+.subtitle\{font-size:24px; margin:6px 0 14px; line-height:1.2\}\
+\
+.details\{\
+  list-style:none; padding:0; margin:0 0 14px; border-top:1px solid var(--line);\
+\}\
+.details li\{\
+  display:flex; gap:8px; padding:6px 0; border-bottom:1px solid var(--line);\
+  font-size:14px; color:var(--ink);\
+\}\
+.details li span:first-child\{min-width:170px; color:var(--muted)\}\
+.details a\{color:#1d4ed8; text-decoration:underline\}\
+\
+/* Buttons */\
+.btn\{appearance:none; border:none; padding:14px 16px; border-radius:8px; font-weight:800; font-size:16px\}\
+.btn.register\{background:var(--blue); color:#fff; width:100%; margin:6px 0 16px; letter-spacing:.4px\}\
+\
+/* Section header */\
+.sectionhead\{\
+  background:#eef2ff; color:#1f2a60; font-weight:800; padding:8px 10px; border-radius:6px;\
+  border:1px solid #dbe3ff; margin:0 0 8px; font-size:13px;\
+\}\
+\
+/* Description text */\
+.description\{font-size:14px; color:var(--ink); line-height:1.45; margin:0 0 100px\}\
+\
+/* Bottom Add to Cart bar */\
+.bar.addtocart\{\
+  position:absolute; left:0; right:0; bottom:0; height:56px; background:var(--blue);\
+  color:#fff; display:flex; align-items:center; justify-content:center; gap:10px;\
+  font-weight:800; letter-spacing:.5px;\
+\}\
+.addtocart .chev\{transform:rotate(180deg); font-size:24px; opacity:.9\}\
+.addtocart .label\{font-size:15px\}\
+\
+/* Small helpers */\
+@media (prefers-color-scheme: dark)\{\
+  body\{background:#0b0f1a\}\
+\}\
+}

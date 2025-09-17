@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Path@Penn • CIS 1070 (Prototype)</title>
+<style>
+:root{
+  --blue:#011F5B;--red:#990000;--ink:#1f2937;--muted:#6b7280;--line:#e5e7eb;
+  --phone-w:390px;--phone-h:844px;
+  font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Inter,Roboto,Arial,sans-serif;
+}
+
+/* Phone frame (for presentation only) */
+body{background:#f3f4f6;margin:0;display:grid;place-items:center;min-height:100vh}
+.phone{
+  width:var(--phone-w);height:var(--phone-h);
+  background:#fff;border:12px solid #000;border-bottom-width:18px;border-radius:42px;
+  overflow:hidden;box-shadow:0 24px 64px rgba(0,0,0,.25);position:relative;
+  display:flex;flex-direction:column;
+}
+
+/* Top brand bar */
+.brandbar{
+  background:var(--blue);color:#fff;height:48px;display:flex;
+  align-items:center;justify-content:space-between;padding:0 12px;font-size:14px;
+}
+.brandbar strong{font-weight:800}
+
+/* Red course bar */
+.coursebar{
+  background:var(--red);color:#fff;height:44px;display:flex;align-items:center;
+  padding:0 10px;gap:10px;font-weight:700;
+}
+.coursebar .icon{background:transparent;border:none;color:#fff;font-size:24px;line-height:1;padding:0 6px}
+.coursebar .coursecode{flex:1}
+.coursebar .course-actions{display:flex;gap:12px;font-size:18px}
+
+/* Content */
+.screen{padding:14px 14px 88px;overflow:auto}
+.title{margin:10px 0 0;font-size:22px}
+.meta{color:var(--muted);font-size:13px;margin:4px 0 10px}
+.subtitle{font-size:24px;margin:6px 0 14px;line-height:1.2}
+
+.details{
+  list-style:none;padding:0;margin:0 0 14px;border-top:1px solid var(--line);
+}
+.details li{
+  display:flex;gap:8px;padding:6px 0;border-bottom:1px solid var(--line);
+  font-size:14px;color:#111;
+}
+.details li span:first-child{min-width:170px;color:var(--muted)}
+.details a{color:#1d4ed8;text-decoration:underline}
+
+/* Buttons */
+.btn{appearance:none;border:none;padding:14px 16px;border-radius:8px;font-weight:800;font-size:16px}
+.btn.register{background:var(--blue);color:#fff;width:100%;margin:6px 0 16px;letter-spacing:.4px}
+
+/* Section header */
+.sectionhead{
+  background:#eef2ff;color:#1f2a60;font-weight:800;padding:8px 10px;border-radius:6px;
+  border:1px solid #dbe3ff;margin:0 0 8px;font-size:13px;
+}
+
+/* Description text */
+.description{font-size:14px;color:#111;line-height:1.45;margin:0 0 100px}
+
+/* Bottom Add to Cart bar */
+.bar.addtocart{
+  position:absolute;left:0;right:0;bottom:0;height:56px;background:var(--blue);
+  color:#fff;display:flex;align-items:center;justify-content:center;gap:10px;
+  font-weight:800;letter-spacing:.5px;
+}
+.addtocart .chev{transform:rotate(180deg);font-size:24px;opacity:.9}
+</style>
+</head>
+<body>
+  <main class="phone">
+    <header class="brandbar">
+      <div><span class="brand">Penn</span></div>
+      <div>Welcome, <strong>Lucianne</strong></div>
+    </header>
+
+    <div class="coursebar">
+      <button class="icon" aria-label="Back">‹</button>
+      <div class="coursecode">CIS 1070</div>
+      <div class="course-actions"><span aria-hidden="true">⌂</span><span aria-hidden="true">🔗</span></div>
+    </div>
+
+    <section class="screen">
+      <h1 class="title">CIS 1070</h1>
+      <div class="meta">Section 401, CRN 84219</div>
+      <h2 class="subtitle">Visual Culture through the<br/>Computer's Eye</h2>
+
+      <ul class="details">
+        <li><span>Last Updated</span> 9/16/2025, 7:59:15 PM</li>
+        <li><span>Section Status</span> Active</li>
+        <li><span>Schedule Type</span> Lecture</li>
+        <li><span>Instruction Method</span> In Class</li>
+        <li><span>Campus</span> Philadelphia</li>
+        <li><span>Credit</span> 1</li>
+        <li><span>Scheduled With</span> <a href="#">VLST 2090, section 401</a></li>
+        <li><span>Maximum Enrollment</span> 25 / <span>Seats Avail</span>: 1</li>
+      </ul>
+
+      <button class="btn register">REGISTER NOW</button>
+
+      <div class="sectionhead">COURSE DESCRIPTION</div>
+      <p class="description">
+        Visual studies and the humanities more generally have thought about and modeled seeing of artworks
+        for many centuries. What useful tools can machine learning develop from databases of art historical
+        images or other datasets of visual culture? Can tools from machine learning illuminate…
+      </p>
+    </section>
+
+    <footer class="bar addtocart">
+      <span class="chev">›</span>
+      <span class="label">ADD TO CART</span>
+    </footer>
+  </main>
+</body>
+</html>
